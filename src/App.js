@@ -5,11 +5,12 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Testimonials from './components/Testimonials';
+//import Testimonials from './components/Testimonials';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
     useEffect(() => {
@@ -24,10 +25,11 @@ const App = () => {
         <p>Experience Excellence with Us</p>
       </div>
             <Services />
-            <Testimonials />
+          {/*}  <Testimonials /> */}
             <Portfolio />
             <Contact />
             <Footer />
+            <BackToTop />
         </div>
     );
 };

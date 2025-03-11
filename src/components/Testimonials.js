@@ -1,7 +1,8 @@
 import React from 'react';
 import './Testimonials.css';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import mohit from '../assests/Images/Mohit.jpg';
+//import mohit from '../assests/Images/Mohit.jpg';
+import { Carousel } from 'react-bootstrap';
 
 const Testimonials = () => {
   const testimonials = [
@@ -10,21 +11,21 @@ const Testimonials = () => {
       position: 'CEO, Global Trade Co.',
       feedback:
         'Ditya Overseas has been instrumental in scaling our business internationally. Their expertise is unmatched.',
-      image: mohit,
+      image: './assests/Images/logo.jpg',
     },
     {
       name: 'Jane Smith',
       position: 'Founder, Local Goods Inc.',
       feedback:
         'The team at Ditya Overseas exceeded our expectations. Their logistics support is top-notch.',
-      image: mohit,
+      image: './assests/Images/logo.jpg',
     },
     {
       name: 'Rajiv Kapoor',
       position: 'Managing Director, Bright Exports',
       feedback:
         'We trust Ditya Overseas for all our product sourcing needs. Highly recommended!',
-      image: mohit,
+      image: './assests/Images/logo.jpg',
     },
   ];
 
@@ -32,7 +33,10 @@ const Testimonials = () => {
     <section id="testimonials" className="testimonials-section">
       <Container>
         <h2 className="section-title text-center">What Our Clients Say</h2>
-        <Row>
+        
+          <Carousel>
+            <Carousel.Item>
+            <Row>
           {testimonials.map((testimonial, index) => (
             <Col key={index} md={4} className="mb-4">
               <Card className="testimonial-card">
@@ -56,7 +60,10 @@ const Testimonials = () => {
               </Card>
             </Col>
           ))}
-        </Row>
+        </Row>  
+          </Carousel.Item>
+          </Carousel>
+        
       </Container>
     </section>
   );

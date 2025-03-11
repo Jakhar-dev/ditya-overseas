@@ -1,53 +1,95 @@
+/* Hero Section Styling */
 .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    transition: backgroung-image 1.5s ease-in-out;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /*
-.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(
-    to bottom right,
-    rgba(0, 123, 255, 0.7),
-    rgba(0, 123, 255, 0.3)
-  ),
-    url('../assests/Images/OfficeBAck.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
+  color: #ffffff;
+  transition: background-image 3s ease-in-out;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  border-radius: 10px;
+  animation: fade-in-text 3s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slide-down 5s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ff6f61, #ff915e);
   color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #ff915e, #ff6f61);
+  transform: scale(1.1);
+}
+
+/* Smooth Fade Transitions
+.fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-out 0.3s ease-in-out;
 } */
 
-.highlight {
-  color: #ffc107;
-  animation: glow 1s infinite alternate;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide-Down Text Animation */
+@keyframes slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text Fade-In Animation */
+@keyframes fade-in-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

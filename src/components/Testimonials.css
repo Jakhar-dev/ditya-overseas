@@ -42,4 +42,20 @@
     font-size: 1rem;
     color: #888;
   }
+  .testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .testimonials p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .testimonials h5 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
   
